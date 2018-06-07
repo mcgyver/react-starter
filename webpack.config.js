@@ -17,6 +17,20 @@ plugins = [
             toType: 'file'
         }
     ]),
+    new CopyWebpackPlugin([
+        {
+            from: 'src/sw.js',
+            to: 'sw.js',
+            toType: 'file'
+        }
+    ]),
+    new CopyWebpackPlugin([
+        {
+            from: 'src/manifest.json',
+            to: 'manifest.json',
+            toType: 'file'
+        }
+    ])
 ];
 
 module.exports = {
