@@ -5,15 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "SET NODE_ENV=development && node_modules\\.bin\\webpack-dev-server",
-    "build": "SET NODE_ENV=production && node_modules\\.bin\\webpack --mode=production"
+    "start": "node_modules\\.bin\\webpack-dev-server --mode=development",
+    "build": "node_modules\\.bin\\webpack --mode=production"
   },
   "keywords": [],
   "author": "Jefferson Santos (jefferson@itrustincode.com) <itrustincode.com>",
   "license": "ISC",
   "dependencies": {
+    "material-ui": "^1.0.0-beta.47",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

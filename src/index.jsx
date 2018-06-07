@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './img/favicon.png';
-//import './css/pure-min.css';
-//import './css/index.css';
+import Button from 'material-ui/Button';
+import './css/index.css';
 
 ReactDOM.render(
-    <h1>Bem Vindo ao React</h1>,
+    <div>
+        <h1>Bem Vindo ao React</h1>
+        <Button> Welcome React</Button>
+    </div>,
     document.querySelector("#main")
 )
