@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 plugins = [
     new HtmlWebpackPlugin({
@@ -9,6 +10,13 @@ plugins = [
         template: path.join(__dirname, 'src/index.html')
     }),
     new ExtractTextPlugin('style.css'),
+    new CopyWebpackPlugin([
+        {
+            from: 'src/react-starter.appcache',
+            to: 'react-starter.appcache',
+            toType: 'file'
+        }
+    ]),
 ];
 
 module.exports = {
@@ -18,7 +26,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: [".js",".jsx"]
+        extensions: [".js", ".jsx"]
     },
     plugins: plugins,
 
@@ -46,7 +54,6 @@ module.exports = {
                 use: ["style-loader", "css-loader"]
             }
         ]
-        
     },
     devServer: {
         publicPath: '/',
