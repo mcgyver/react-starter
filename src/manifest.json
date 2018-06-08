@@ -1,6 +1,6 @@
 {
     "name": "React Starter",
-    "short_name": "React Starter",
+    "short_name": "Starter",
     "theme_color": "#2c80b9",
     "background_color": "#2c80b9",
     "display": "fullscreen",
@@ -36,6 +36,11 @@
         {
             "src": "img/icon-192x192.png",
             "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon-192x192.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ]
