@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
 import './img/favicon.png';
 import './css/index.css';
 import './img/icon-72x72.png';
@@ -12,6 +13,8 @@ import './img/icon-192x192.png';
 import Home from './components/Home';
 
 ReactDOM.render(
-    <Home/>,
+    <BrowserRouter>
+        <Home/>
+    </BrowserRouter>,
     document.querySelector("#main")
 )

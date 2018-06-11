@@ -16,6 +16,26 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { mailFolderListItems, otherMailFolderListItems } from './menuItems';
 
+import { Switch, Route, Link } from 'react-router-dom';
+
+import MainPage from './MainPage';
+import Programacao from './Programacao';
+import Estabelecimentos from './Estabelecimentos';
+import Outras from './Outras';
+
+
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import StarIcon from '@material-ui/icons/Star';
+import SendIcon from '@material-ui/icons/Send';
+import MailIcon from '@material-ui/icons/Mail';
+import DeleteIcon from '@material-ui/icons/Delete';
+import ReportIcon from '@material-ui/icons/Report';
+
+
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -119,7 +139,7 @@ class Home extends React.Component {
         const drawer = (
             <Drawer
                 variant="persistent"
-                
+                onClick={this.handleDrawerClose}
                 open={open}
                 classes={{
                     paper: classes.drawerPaper,
@@ -131,13 +151,21 @@ class Home extends React.Component {
                     </IconButton>
                 </div>
                 <Divider />
-                <List>{mailFolderListItems}</List>
+                <div>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <InboxIcon />
+                        </ListItemIcon>
+                        <Link to='/programacao'>Programação</Link>
+                    </ListItem>
+                </div>
+                
                 <Divider />
                 <List>{otherMailFolderListItems}</List>
             </Drawer>
         );
 
-        
+
 
         return (
             <div className={classes.root}>
@@ -172,7 +200,12 @@ class Home extends React.Component {
                         onClick={this.handleDrawerClose}
                     >
                         <div className={classes.drawerHeader} />
-                        <Typography>{'Página inicial'}</Typography>
+                        <Switch>
+                            <Route exact path='/' component={MainPage} />
+                            <Route path='/programacao' component={Programacao} />
+                            <Route path='/estabelecimentos' component={Estabelecimentos} />
+                            <Route path='/outras' component={Outras} />
+                        </Switch>
                     </main>
                 </div>
             </div>
