@@ -29,14 +29,7 @@ import StyledLink from './styled_components/StyledLink';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import StarIcon from '@material-ui/icons/Star';
-import SendIcon from '@material-ui/icons/Send';
-import MailIcon from '@material-ui/icons/Mail';
-import DeleteIcon from '@material-ui/icons/Delete';
-import ReportIcon from '@material-ui/icons/Report';
-
+import EventNote from '@material-ui/icons/EventNote';
 
 const drawerWidth = 240;
 
@@ -45,7 +38,6 @@ const styles = theme => ({
         flexGrow: 1,
     },
     appFrame: {
-        //height: 430,
         zIndex: 1,
         overflow: 'hidden',
         position: 'relative',
@@ -154,44 +146,46 @@ class Home extends React.Component {
                 </div>
                 <Divider />
                 <div>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <InboxIcon />
-                        </ListItemIcon>
-                        <StyledLink to='/programacao/all'>Programação</StyledLink>
+                    <StyledLink to='/programacao/all'>
+                        <ListItem button>
+                            <ListItemIcon>
+                                <EventNote />
+                            </ListItemIcon>
+                            Programação
                     </ListItem>
+                    </StyledLink>
                     <ListItem button>
                         <ListItemIcon>
-                            <InboxIcon />
+                            <EventNote />
                         </ListItemIcon>
                         <StyledLink to='/programacao/show'>Shows</StyledLink>
                     </ListItem>
                     <ListItem button>
                         <ListItemIcon>
-                            <InboxIcon />
+                            <EventNote />
                         </ListItemIcon>
                         <StyledLink to='/programacao/treatro'>Teatro</StyledLink>
                     </ListItem>
                     <ListItem button>
                         <ListItemIcon>
-                            <InboxIcon />
+                            <EventNote />
                         </ListItemIcon>
                         <StyledLink to='/programacao/cinema'>Cinema</StyledLink>
                     </ListItem>
                     <ListItem button>
                         <ListItemIcon>
-                            <InboxIcon />
+                            <EventNote />
                         </ListItemIcon>
                         <StyledLink to='/programacao/oficinas'>Oficinas</StyledLink>
                     </ListItem>
                     <ListItem button>
                         <ListItemIcon>
-                            <InboxIcon />
+                            <EventNote />
                         </ListItemIcon>
                         <StyledLink to='/programacao/recreacao'>Recreação</StyledLink>
                     </ListItem>
                 </div>
-                
+
                 <Divider />
                 <List>{otherMailFolderListItems}</List>
             </Drawer>
