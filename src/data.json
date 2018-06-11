@@ -1,0 +1,44 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "type": 1,
+            "datetime": "2018-06-10 10:00",
+            "description": "Descrição da atração",
+            "image": "image.pgn",
+            "link": "http://paginadabanda.com"
+        },
+        {
+            "id": 1,
+            "type": 1,
+            "datetime": "2018-06-10 10:00",
+            "description": "Descrição da atração",
+            "image": "image.pgn",
+            "link": "http://paginadabanda.com"
+        },
+        {
+            "id": 1,
+            "type": 2,
+            "datetime": "2018-06-10 10:00",
+            "description": "Descrição da atração",
+            "image": "image.pgn",
+            "link": "http://paginadabanda.com"
+        },
+        {
+            "id": 1,
+            "type": 2,
+            "datetime": "2018-06-10 10:00",
+            "description": "Descrição da atração",
+            "image": "image.pgn",
+            "link": "http://paginadabanda.com"
+        },
+        {
+            "id": 1,
+            "type": 1,
+            "datetime": "2018-06-10 10:00",
+            "description": "Descrição da atração",
+            "image": "image.pgn",
+            "link": "http://paginadabanda.com"
+        }
+    ]
+}
