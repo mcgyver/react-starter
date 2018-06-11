@@ -16,12 +16,14 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { mailFolderListItems, otherMailFolderListItems } from './menuItems';
 
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import MainPage from './MainPage';
 import Programacao from './Programacao';
 import Estabelecimentos from './Estabelecimentos';
 import Outras from './Outras';
+
+import StyledLink from './styled_components/StyledLink';
 
 
 import ListItem from '@material-ui/core/ListItem';
@@ -43,7 +45,7 @@ const styles = theme => ({
         flexGrow: 1,
     },
     appFrame: {
-        height: 430,
+        //height: 430,
         zIndex: 1,
         overflow: 'hidden',
         position: 'relative',
@@ -156,7 +158,37 @@ class Home extends React.Component {
                         <ListItemIcon>
                             <InboxIcon />
                         </ListItemIcon>
-                        <Link to='/programacao'>Programação</Link>
+                        <StyledLink to='/programacao/all'>Programação</StyledLink>
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <InboxIcon />
+                        </ListItemIcon>
+                        <StyledLink to='/programacao/show'>Shows</StyledLink>
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <InboxIcon />
+                        </ListItemIcon>
+                        <StyledLink to='/programacao/treatro'>Teatro</StyledLink>
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <InboxIcon />
+                        </ListItemIcon>
+                        <StyledLink to='/programacao/cinema'>Cinema</StyledLink>
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <InboxIcon />
+                        </ListItemIcon>
+                        <StyledLink to='/programacao/oficinas'>Oficinas</StyledLink>
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <InboxIcon />
+                        </ListItemIcon>
+                        <StyledLink to='/programacao/recreacao'>Recreação</StyledLink>
                     </ListItem>
                 </div>
                 
@@ -202,7 +234,7 @@ class Home extends React.Component {
                         <div className={classes.drawerHeader} />
                         <Switch>
                             <Route exact path='/' component={MainPage} />
-                            <Route path='/programacao' component={Programacao} />
+                            <Route path='/programacao/:type' component={Programacao} />
                             <Route path='/estabelecimentos' component={Estabelecimentos} />
                             <Route path='/outras' component={Outras} />
                         </Switch>
