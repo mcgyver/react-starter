@@ -11,6 +11,7 @@ import './img/icon-152x152.png';
 import './img/icon-192x192.png';
 
 import Home from './components/Home';
+import data from './data.json';
 
 ReactDOM.render(
     <BrowserRouter>
